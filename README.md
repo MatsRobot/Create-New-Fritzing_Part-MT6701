@@ -1,6 +1,8 @@
 # Create-New-Fritzing_Part-MT6701
 Creating New parts in Fritzing is not straight forward and it took me a day to get it right, so this is my notes when I made a new Frtizing Part MT6701
 
+![Screenshot 2024-09-04 090006](https://github.com/user-attachments/assets/1c865b8d-d03e-4994-b2b1-2320f37c6ebe)
+
 There are 4 stages that are explained in The full in 'Fritzing New Parts.doc' instruction document
 
 Stage 1 - Make a Template from an IC
