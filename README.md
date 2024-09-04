@@ -3,15 +3,15 @@ Creating New parts in Fritzing is not straight forward and it took me a day to g
 
 There are 4 stages that are explained in The full in 'Fritzing New Parts.doc' instruction document
 
-Stage 1 - Template
+Stage 1 - Make a Template from an IC
 
-Stage 2 - Edit the xml file
+Stage 2 - Rename files and Edit the xml file .fzp.
 
-Stage 3 - Breadboard SVG edit
+Stage 3 - Edit Breadboard SVG file
 
 ![Screenshot 2024-09-04 082643](https://github.com/user-attachments/assets/0a2c6a35-7743-4e2b-aba9-47cb5250f7af)
 
-Stage 4- PCB layer edit
+Stage 4- Edit PCB SVG file
 
 ![Screenshot 2024-09-04 083007](https://github.com/user-attachments/assets/f220ed39-0ca0-4e2e-916f-4da62f87f352)
 
