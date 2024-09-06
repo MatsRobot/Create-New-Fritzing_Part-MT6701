@@ -35,4 +35,4 @@ The other issue is the fill colour that makes the text appear black in Fritzing 
 
 ![Screenshot 2024-09-04 081324](https://github.com/user-attachments/assets/ec5d38ef-9503-4922-89c6-7b0aa8f70c04)
 
-
+To create Transparency section in your part, you need to save the file as png and ensure that the sections that you want to be transparent are already transparent before importing into Inkscape. In this case when you are Tracing the Bitmap, the transparent part of the image remains transparent.
