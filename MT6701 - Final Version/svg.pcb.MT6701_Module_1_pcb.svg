@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Fritzing (http://www.fritzing.org/) -->
+
+<svg
+   viewBox="0 0 916 915.99997"
+   x="0in"
+   version="1.2"
+   height="0.91600001in"
+   y="0in"
+   width="0.91600001in"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5" />
+  <desc
+     id="desc1">
+    <referenceFile>jumper_5_100mil_pcb.svg</referenceFile>
+  </desc>
+  <g
+     gorn="0.1"
+     id="silkscreen"
+     transform="rotate(-90,488.6946,315.21115)">
+    <line
+       stroke="#ffffff"
+       stroke-width="10"
+       x1="37.683395"
+       x2="37.683395"
+       y2="531.78894"
+       y1="31.788931"
+       id="line1" />
+    <line
+       stroke="#ffffff"
+       stroke-width="10"
+       x1="37.683395"
+       x2="137.6834"
+       y2="531.78894"
+       y1="531.78894"
+       id="line2" />
+    <line
+       stroke="#ffffff"
+       stroke-width="10"
+       x1="137.6834"
+       x2="137.6834"
+       y2="31.788931"
+       y1="531.78894"
+       id="line3" />
+    <line
+       stroke="#ffffff"
+       stroke-width="10"
+       x1="137.6834"
+       x2="37.683395"
+       y2="31.788931"
+       y1="31.788931"
+       id="line4" />
+    <line
+       stroke="#ffffff"
+       stroke-width="5"
+       x1="37.683395"
+       x2="72.683395"
+       y2="31.788931"
+       y1="66.788933"
+       id="line5" />
+    <!-- 120 -->
+    <path
+       id="TopMask"
+       d="M 5.0132243,91.614292 C 4.4576564,44.873511 47.246913,4.9205879 94.082094,5.0001199 H 811.20069 c 54.02442,2.4825159 96.21644,32.6755361 99.32429,86.6141721 V 800.27566 c -0.207,56.83559 -36.58481,109.8056 -101.60811,110.23624 H 98.649728 c 0,0 -91.2764522,-58.01618 -93.6365037,-110.23624 -0.02245,-0.49676 0,-708.661368 0,-708.661368 z"
+       fill="none"
+       stroke="#000000"
+       stroke-width="10"
+       transform="translate(-115.78298,-166.59572)" />
+    <circle
+       id="circle1"
+       cx="762.95801"
+       cy="124.50298"
+       r="62"
+       fill-opacity="1"
+       fill="#000000"
+       transform="translate(-115.78298,-166.59572)" />
+    <circle
+       id="circle2"
+       cx="762.95801"
+       cy="774.12604"
+       r="62"
+       fill-opacity="1"
+       fill="#000000"
+       transform="translate(-115.78298,-166.59572)" />
+    <circle
+       id="circle3"
+       cx="140.91086"
+       cy="774.12604"
+       r="62"
+       fill-opacity="1"
+       fill="#000000"
+       transform="translate(-115.78298,-166.59572)" />
+    <circle
+       id="circle4"
+       cx="140.90181"
+       cy="124.50298"
+       r="62"
+       fill-opacity="1"
+       fill="#000000"
+       transform="translate(-115.78298,-166.59572)" />
+    <text
+       gorn="0.1.10"
+       font-family="OCRA"
+       x="277.17029"
+       stroke="none"
+       text-anchor="start"
+       y="205.19559"
+       id="label"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:83.3333px;font-family:OCRA;-inkscape-font-specification:'OCRA, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:start;fill:#c88c15;stroke:none;fill-opacity:1"
+       transform="rotate(90,488.69459,315.21115)">MT6701</text>
+  </g>
+  <g
+     gorn="0.2"
+     id="copper1"
+     transform="rotate(-90,488.6946,315.21115)">
+    <rect
+       gorn="0.2.0.0"
+       fill="none"
+       x="58.683392"
+       stroke="#ffbf00"
+       stroke-width="20"
+       height="58"
+       y="55.146717"
+       id="square"
+       width="58" />
+    <circle
+       cx="87.683395"
+       gorn="0.2.0.1"
+       fill="none"
+       stroke="#ffbf00"
+       cy="84.146721"
+       r="29"
+       stroke-width="20"
+       id="connector0pin" />
+    <circle
+       cx="87.683395"
+       gorn="0.2.0.2"
+       fill="none"
+       stroke="#ffbf00"
+       cy="184.14671"
+       r="29"
+       stroke-width="20"
+       id="connector1pin" />
+    <circle
+       cx="87.683395"
+       gorn="0.2.0.3"
+       fill="none"
+       stroke="#ffbf00"
+       cy="284.14673"
+       r="29"
+       stroke-width="20"
+       id="connector2pin" />
+    <circle
+       cx="87.683395"
+       gorn="0.2.0.4"
+       fill="none"
+       stroke="#ffbf00"
+       cy="384.14673"
+       r="29"
+       stroke-width="20"
+       id="connector3pin" />
+    <circle
+       cx="87.683395"
+       gorn="0.2.0.5"
+       fill="none"
+       stroke="#ffbf00"
+       cy="484.14673"
+       r="29"
+       stroke-width="20"
+       id="connector4pin" />
+  </g>
+</svg>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://matsrobot.github.io/Favicon-192.png" sizes="192x192">
+    
+    <title>Fritzing-Parts: MT6701 Magnetic Encoder Guide | MatsRobot</title>
+    <meta name="description" content="A comprehensive workflow for creating high-quality custom Fritzing components, specifically addressing SVG rendering and XML font bugs.">
+    
+    <link rel="canonical" href="https://github.com/MatsRobot/Create-New-Fritzing_Part-MT6701" />
+
+    <style>
+        :root {
+            --gh-green: #238636;
+            --gh-green-hover: #2ea44f;
+            --gh-dark: #24292e;
+            --gh-blue: #0366d6;
+            --gh-border: #eaecef;
+            --gh-bg-gray: #f6f8fa;
+            --note-bg: #fffbdd;
+            --note-border: #d4a017;
+            --code-bg: #f1f8ff;
+        }
+
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; 
+            line-height: 1.6; 
+            color: var(--gh-dark); 
+            max-width: 950px; 
+            margin: 0 auto; 
+            padding: 2rem; 
+        }
+
+        .hero-section {
+            display: flex;
+            gap: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-text { flex: 3; }
+
+        .image-sidebar { 
+            flex: 2; 
+            border: 1px solid var(--gh-border);
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .image-sidebar img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .caption { 
+            font-size: 0.85rem; 
+            color: #586069; 
+            margin-top: 10px; 
+            display: block; 
+        }
+
+        h1 { font-size: 1.8rem; margin-top: 0; }
+        h2 { color: var(--gh-blue); border-bottom: 1px solid var(--gh-border); padding-bottom: 0.3em; margin-top: 2rem; }
+        h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+
+        .note { 
+            background-color: var(--note-bg); 
+            padding: 1.25rem; 
+            border-left: 5px solid var(--note-border); 
+            margin: 1.5rem 0; 
+            border-radius: 4px;
+        }
+
+        /* --- FULL BUTTON STYLES (NO TRUNCATION) --- */
+        .btn-download { 
+            background-color: var(--gh-green); 
+            color: white; 
+            padding: 12px 28px; 
+            text-decoration: none; 
+            border-radius: 6px; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 18px; 
+            font-weight: 600;
+            transition: background 0.2s, transform 0.1s;
+            border: 1px solid rgba(27, 31, 35, 0.15);
+            box-shadow: 0 1px 0 rgba(27, 31, 35, 0.1);
+        }
+
+        .btn-download:hover { 
+            background-color: var(--gh-green-hover); 
+        }
+
+        .btn-download:active {
+            transform: translateY(1px);
+        }
+
+        .btn-text-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            line-height: 1.1;
+            text-align: center;
+        }
+
+        .btn-main {
+            font-size: 1.35rem;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .btn-sub-lines {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.7rem;
+            font-weight: 400;
+            opacity: 0.95;
+            letter-spacing: 0.2px;
+        }
+
+        .download-icon {
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+
+        .tech-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .tech-table th { 
+            background-color: var(--gh-bg-gray); 
+            text-align: left; 
+            padding: 12px; 
+            border: 1px solid var(--gh-border);
+        }
+
+        .tech-table td { 
+            padding: 12px; 
+            border: 1px solid var(--gh-border); 
+        }
+
+        .grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 2rem; 
+            margin-top: 1.5rem; 
+        }
+
+        code { background-color: var(--code-bg); padding: 0.2em 0.4em; border-radius: 3px; font-family: monospace; color: #0366d6; }
+
+        footer { 
+            margin-top: 4rem; 
+            padding: 2rem 0;
+            border-top: 1px solid var(--gh-border); 
+            text-align: center; 
+            color: #6a737d; 
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section, .grid { flex-direction: column; }
+            .btn-download { width: 100%; justify-content: center; box-sizing: border-box; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-section">
+        <div class="hero-text">
+            <h1>🎨 Fritzing-Parts: MT6701 Magnetic Encoder Guide</h1>
+            <p>A precision workflow for creating high-quality custom components in Fritzing. This guide documents the exact XML edits and Inkscape settings required to bypass common SVG rendering bugs.</p>
+            <div class="note">
+                <strong>Pro-Tip:</strong> A <code>.fzpz</code> file is just a renamed <code>.zip</code> archive. Rename it to access the raw <code>.fzp</code> metadata and SVG source files directly for manual editing.
+            </div>
+
+            <a href="https://github.com/MatsRobot/Create-New-Fritzing_Part-MT6701" class="btn-download">
+                <svg class="download-icon" width="32" height="32" viewBox="0 0 24 24">
+                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                </svg>
+                <div class="btn-text-container">
+                    <span class="btn-main">Downloads</span>
+                    <div class="btn-sub-lines">
+                        <span>Open-Source MT6701 Part</span>
+                        <span>& Full Documentation at GitHub</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="image-sidebar">
+            <img src="https://github.com/user-attachments/assets/1c865b8d-d03e-4994-b2b1-2320f37c6ebe" alt="MT6701 Fritzing Part Preview">
+            <span class="caption">MT6701 Final Fritzing Render</span>
+        </div>
+    </div>
+
+    <h2>Quick-Fix Troubleshooting</h2>
+    <p>If your custom part looks "broken" upon import, refer to these common XML/SVG fixes:</p>
+    <table class="tech-table">
+        <thead>
+            <tr><th>Symptom</th><th>Likely Cause</th><th>Fix Action</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>Giant/Tiny Text</strong></td><td>Inkscape <code>px</code> units</td><td>Delete "px" from <code>font-size</code> in XML Editor</td></tr>
+            <tr><td><strong>Black Text Only</strong></td><td>Hardcoded <code>fill</code> value</td><td>Remove specific <code>fill</code> line in XML tree</td></tr>
+            <tr><td><strong>Single-Sided PCB</strong></td><td>Incorrect Layering</td><td>Nest <code>copper1</code> group inside <code>copper0</code></td></tr>
+            <tr><td><strong>Invisible Part</strong></td><td>Missing Layer ID</td><td>Match top-level group ID to <code>.fzp</code> definition</td></tr>
+        </tbody>
+    </table>
+
+    <h2>Advanced Technical Workflow</h2>
+    <p>Creating professional parts requires a 4-stage technical cycle to ensure manufacturing accuracy:</p>
+    
+    <div class="grid">
+        <div>
+            <h3>1. XML Metadata (.fzp)</h3>
+            <p>Define pin mappings and internal <strong>Buses</strong>. If your part has multiple GND pins, linking them in the <code>.fzp</code> file ensures they share the same net in Fritzing.</p>
+        </div>
+        <div>
+            <h3>2. PCB Layer Nesting</h3>
+            <p>For dual-side connectivity, the SVG structure must follow a specific hierarchy: <code>&lt;g id="copper1"&gt;</code> (Top Layer) containing <code>&lt;g id="copper0"&gt;</code> (Bottom Layer). This allows Fritzing to recognize through-hole pads correctly for manufacturing.</p>
+        </div>
+    </div>
+
+    
+
+    <h2>Solving the Inkscape Rendering Engine Bugs</h2>
+    <p>Modern Inkscape versions output data that Fritzing's older rendering engine often misinterprets. Use the following logic to sanitize your files:</p>
+    <ul>
+        <li><strong>The Font-Size Bug:</strong> Open the <strong>XML Editor (Edit -> XML Editor)</strong>. Fritzing requires unit-less values for scaling. <code>font-size: 12px</code> must become <code>font-size: 12</code>.</li>
+        <li><strong>Vector Optimization:</strong> Always export as <strong>"Optimized SVG"</strong>. This strips unnecessary metadata that can cause part "ghosting" or invisible components.</li>
+        <li><strong>Transparency:</strong> For complex shapes, use the PNG-to-Bitmap tracing workflow to maintain transparency without adding heavy path data.</li>
+    </ul>
+
+    <div class="note" style="background-color: #f1f8ff; border-left-color: #0366d6;">
+        <strong>Recommended Tools:</strong> Use <code>FritzingCheckApp</code> to validate your SVGs before import. It automatically detects missing layer IDs and non-standard XML tags.
+    </div>
+
+    <footer>
+        <p>© 2026 MatsRobot | Part of the Open Source Robotics Initiative</p>
+        <p><small>Copyright (c) 2026 | Licensed under the <a href="https://github.com/MatsRobot/matsrobot.github.io/blob/main/LICENSE" style="color: #6a737d;">MIT License</a></small></p>
+    </footer>
+
+</body>
+</html>
+
+
+
