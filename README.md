@@ -1,6 +1,7 @@
 # 🎨 Fritzing-Parts: MT6701 Magnetic Encoder Guide
 
 A comprehensive, step-by-step workflow for creating high-quality custom components in Fritzing, specifically addressing the common SVG rendering and XML font bugs.
+View full list of new parts at https://matsrobot.github.io/Fritzing_Part_Catalogue
 
 ---
 
